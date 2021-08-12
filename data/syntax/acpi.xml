@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "language.dtd" [
+        <!ENTITY ident "[A-Za-z_][A-Za-z_0-9]{0,3}">
+]>
+
+<language name="ACPI Source Language" version="1" kateversion="5.79" section="Other" extensions="*.dsl;*.asl"
+		mimetype="text/x-asl" author="Christoph Grenz (christophg+kde@grenz-bonn.de)" license="LGPL">
+
+<highlighting>
+
+	<list name="resources">
+		<item>IO</item>
+		<item>DMA</item>
+		<item>DWordIO</item>
+		<item>DWordMemory</item>
+		<item>DWordSpace</item>
+		<item>EndDependentFn</item>
+		<item>ExtendedIO</item>
+		<item>ExtendedMemory</item>
+		<item>ExtendedSpace</item>
+		<item>FixedIO</item>
+		<item>Interrupt</item>
+		<item>IO</item>
+		<item>IRQ</item>
+		<item>IRQNoFlags</item>
+		<item>Memory24</item>
+		<item>Memory32</item>
+		<item>Memory32Fixed</item>
+		<item>QWordIO</item>
+		<item>QWordMemory</item>
+		<item>QWordSpace</item>
+		<item>Register</item>
+		<item>StartDependentFn</item>
+		<item>StartDependentFnNoPri</item>
+		<item>VendorLong</item>
+		<item>VendorShort</item>
+		<item>WordBusNumber</item>
+		<item>WordIO</item>
+		<item>WordSpace</item>
+	</list>
+
+	<list name="compilercontrols">
+		<item>External</item>
+		<item>Include</item>
+	</list>
+	
+	<list name="tablemanagement">
+		<item>DefinitionBlock</item>
+		<item>Load</item>
+		<item>LoadTable</item>
+		<item>Unload</item>
+	</list>
+	
+	<list name="objectcreation1">
+		<item>PowerResource</item>
+		<item>Processor</item>
+		<item>Device</item>
+		<item>Scope</item>
+		<item>ThermalZone</item>
+		<item>Function</item>
+		<item>Method</item>
+		
+		<item>Nothing</item>
+	</list>
+	
+	<list name="objectcreation">
+		<item>Buffer</item>
+		
+		<item>Package</item>
+		<item>EisaId</item>
+		<item>ResourceTemplate</item>
+		<item>Unicode</item>
+	</list>
+	
+	<list name="operationregion">
+		<item>DataTableRegion</item>
+		<item>OperationRegion</item>
+		<item>BankField</item>
+		<item>Field</item>
+		<item>IndexField</item>
+	</list>
+	
+	<list name="functions">
+		<item>Name</item>
+	
+		<item>CreateBitField</item>
+		<item>CreateByteField</item>
+		<item>CreateDWordField</item>
+		<item>CreateField</item>
+		<item>CreateQWordField</item>
+		<item>CreateWordField</item>
+
+		<item>Acquire</item>
+		<item>Event</item>
+		<item>Mutex</item>
+		<item>Notify</item>
+		<item>Release</item>
+		<item>Reset</item>
+		<item>Signal</item>
+		<item>Wait</item>
+
+		<item>CondRefOf</item>
+		<item>DerefOf</item>
+		<item>RefOf</item>
+
+		<item>Add</item>
+		<item>And</item>
+		<item>Decrement</item>
+		<item>Divide</item>
+		<item>FindSetLeftBit</item>
+		<item>FindSetRightBit</item>
+		<item>Increment</item>
+		<item>Mod</item>
+		<item>Multiply</item>
+		<item>NAnd</item>
+		<item>NOr</item>
+		<item>Not</item>
+		<item>Or</item>
+		<item>ShiftLeft</item>
+		<item>ShiftRight</item>
+		<item>Subtract</item>
+		<item>Xor</item>
+
+		<item>LAnd</item>
+		<item>LEqual</item>
+		<item>LGreater</item>
+		<item>LGreaterEqual</item>
+		<item>LLess</item>
+		<item>LLessEqual</item>
+		<item>LNot</item>
+		<item>LNotEqual</item>
+		<item>LOr</item>
+
+		<item>Concatenate</item>
+		<item>ConcatenateResTemplate</item>
+		<item>CopyObject</item>
+		<item>Debug</item>
+		<item>EisaId</item>
+		<item>FromBCD</item>
+		<item>Index</item>
+		<item>Match</item>
+		<item>Mid</item>
+		<item>ObjectType</item>
+		<item>SizeOf</item>
+		<item>Store</item>
+		<item>Timer</item>
+		<item>ToBCD</item>
+		<item>ToBuffer</item>
+		<item>ToDecimalString</item>
+		<item>ToHexString</item>
+		<item>ToInteger</item>
+		<item>ToString</item>
+		<item>ToUUID</item>
+	</list>
+	
+	<list name="flowcontrol">
+		<item>Break</item>
+		<item>BreakPoint</item>
+		<item>Case</item>
+		<item>Continue</item>
+		<item>Default</item>
+		<item>Else</item>
+		<item>ElseIf</item>
+		<item>If</item>
+		<item>NoOp</item>
+		<item>Return</item>
+		<item>Sleep</item>
+		<item>Stall</item>
+		<item>Switch</item>
+		<item>While</item>
+	</list>
+	
+	<list name="fatal">
+		<item>Fatal</item>
+	</list>
+	
+<!--	<list name="constants">
+		<item>One</item>
+		<item>Ones</item>
+		<item>Revision</item>
+		<item>Zero</item>
+	</list>-->
+	
+	<list name="locals">
+		<item>Local0</item>
+		<item>Local1</item>
+		<item>Local2</item>
+		<item>Local3</item>
+		<item>Local4</item>
+		<item>Local5</item>
+		<item>Local6</item>
+		<item>Local7</item>
+	</list>
+	
+	<list name="args">
+		<item>Arg0</item>
+		<item>Arg1</item>
+		<item>Arg2</item>
+		<item>Arg3</item>
+		<item>Arg4</item>
+		<item>Arg5</item>
+		<item>Arg6</item>
+		<item>Arg7</item>
+	</list>
+
+	
+	<list name="others">
+		<item>SMBQuick</item>
+		<item>SMBSendReceive</item>
+		<item>SMBByte</item>
+		<item>SMBWord</item>
+		<item>SMBBlock</item>
+		<item>SMBProcessCall</item>
+		<item>SMBBlockProcessCall</item>
+		<item>AnyAcc</item>
+		<item>ByteAcc</item>
+		<item>WordAcc</item>
+		<item>DWordAcc</item>
+		<item>QWordAcc</item>
+		<item>BufferAcc</item>
+		<item>AddressRangeMemory</item>
+		<item>AddressRangeReserved</item>
+		<item>AddressRangeNVS</item>
+		<item>AddressRangeACPI</item>
+		<item>RegionSpaceKeyword</item>
+		<item>FFixedHW</item>
+		<item>BusMaster</item>
+		<item>NotBusMaster</item>
+		<item>SubDecode</item>
+		<item>PosDecode</item>
+		<item>Compatibility</item>
+		<item>TypeA</item>
+		<item>TypeB</item>
+		<item>TypeF</item>
+		<item>Edge</item>
+		<item>Level</item>
+		<item>ActiveHigh</item>
+		<item>ActiveLow</item>
+		<item>Decode16</item>
+		<item>Decode10</item>
+		<item>Lock</item>
+		<item>NoLock</item>
+		<item>MTR</item>
+		<item>MEQ</item>
+		<item>MLE</item>
+		<item>MLT</item>
+		<item>MGE</item>
+		<item>MGT</item>
+		<item>MaxFixed</item>
+		<item>MaxNotFixed</item>
+		<item>Cacheable </item>
+		<item>WriteCombining</item>
+		<item>Prefetchable</item>
+		<item>NonCacheable</item>
+		<item>MinFixed</item>
+		<item>MinNotFixed</item>
+		<item>UnknownObj</item>
+		<item>IntObj </item>
+		<item>StrObj </item>
+		<item>BuffObj</item>
+		<item>PkgObj</item>
+		<item>FieldUnitObj</item>
+		<item>DeviceObj</item>
+		<item>EventObj</item>
+		<item>MethodObj</item>
+		<item>MutexObj</item>
+		<item>OpRegionObj</item>
+		<item>PowerResObj</item>
+		<item>ProcessorObj</item>
+		<item>ThermalZoneObj</item>
+		<item>BuffFieldObj</item>
+		<item>DDBHandleObj</item>
+		<item>ISAOnlyRanges</item>
+		<item>NonISAOnlyRanges</item>
+		<item>EntireRange</item>
+		<item>ReadWrite</item>
+		<item>ReadOnly</item>
+		<item>UserDefRegionSpace</item>
+		<item>SystemIO</item>
+		<item>SystemMemory</item>
+		<item>PCI_Config</item>
+		<item>EmbeddedControl</item>
+		<item>SMBus</item>
+		<item>SystemCMOS</item>
+		<item>PciBarTarget</item>
+		<item>IPMI</item>
+		<item>ResourceConsumer</item>
+		<item>ResourceProducer</item>
+		<item>Serialized</item>
+		<item>NotSerialized</item>
+		<item>Shared</item>
+		<item>Exclusive</item>
+		<item>SparseTranslation</item>
+		<item>DenseTranslation</item>
+		<item>TypeTranslation</item>
+		<item>TypeStatic</item>
+		<item>Preserve</item>
+		<item>WriteAsOnes</item>
+		<item>WriteAsZeros</item>
+		<item>Transfer8</item>
+		<item>Transfer16</item>
+		<item>Transfer8_16</item>
+	</list>
+	
+	<contexts>
+		<context attribute="Error" lineEndContext="#stay" name="Default">
+			<DetectChar char="{" attribute="Normal Text" beginRegion="block" />
+			<DetectChar char="}" attribute="Normal Text" endRegion="block" />
+			<DetectChar char='"' attribute="String" context="String" />
+			
+			<Detect2Chars char='/' char1="/" attribute="Comment" context="Comment" />
+			<Detect2Chars char='/' char1="*" attribute="Comment" beginRegion="comment" context="MLComment" />
+			
+			<Detect2Chars char=',' char1='.' attribute="Normal Text" />
+			<Detect2Chars char='\' char1='^' attribute="Keyword" />
+			
+			<DetectChar char='(' attribute="Normal Text" beginRegion="par" />
+			<DetectChar char=')' attribute="Normal Text" endRegion="par" />
+			
+			<HlCOct attribute="Oct" />
+			<HlCHex attribute="Hex" />
+			<Int attribute="Number" />
+			
+			<keyword String="compilercontrols" attribute="Keyword" />
+			<keyword String="tablemanagement" attribute="Keyword" />
+			<keyword String="objectcreation1" attribute="Keyword" />
+			<keyword String="objectcreation" attribute="Function" />
+			<keyword String="operationregion" attribute="Keyword" />
+			<keyword String="flowcontrol" attribute="Keyword" />
+			<keyword String="functions" attribute="Function" />
+			<keyword String="fatal" attribute="Function" />
+			<keyword String="locals" attribute="Variable" />
+			<keyword String="args" attribute="Variable" />
+			<keyword String="resources" attribute="Function" />
+			<keyword String="others" attribute="DataType" />
+			
+			<RegExpr String="\b&ident;\b" attribute="Normal Text" />
+			<RegExpr String="\b[A-Za-z][A-Za-z0-9]*\b" attribute="Invalid" />
+			
+			<RegExpr attribute="Preprocessor" context="Outscoped" String="#\s*if\s+0\s*$" beginRegion="PP" firstNonSpace="true" />
+			<DetectChar context="AfterHash" char="#" firstNonSpace="true" lookAhead="true" />
+			
+			<DetectSpaces attribute="Normal Text" />
+		</context>
+		
+		<context attribute="Comment" lineEndContext="#pop" name="Comment">
+		</context>
+		
+		<context attribute="Comment" lineEndContext="#stay" name="MLComment">
+			<Detect2Chars char='*' char1="/" attribute="Comment" endRegion="comment" context="#pop" />
+		</context>
+		
+		<context attribute="String" lineEndContext="#stay" name="String">
+			<DetectChar char='"' attribute="String" context="#pop" />
+			<DetectChar char='\' context="Escape" />
+		</context>
+
+		<context attribute="String" lineEndContext="#stay" name="Escape" fallthroughContext="#pop">
+			<Detect2Chars char='"' char1='\' context="#pop" />
+		</context>
+	
+	
+		<context attribute="Comment" lineEndContext="#stay" name="Outscoped" >
+			<DetectSpaces />
+			<DetectIdentifier />
+			<DetectChar attribute="String" context="String" char="&quot;"/>
+			<Detect2Chars attribute="Comment" context="Comment" char="/" char1="/"/>
+			<Detect2Chars attribute="Comment" context="MLComment" char="/" char1="*" beginRegion="comment"/>
+			<RegExpr attribute="Comment" context="Outscoped intern" String="#\s*if" beginRegion="PP" firstNonSpace="true" />
+			<RegExpr attribute="Preprocessor" context="#pop" String="#\s*el(?:se|if)" firstNonSpace="true" />
+			<RegExpr attribute="Preprocessor" context="#pop" String="#\s*endif" endRegion="PP" firstNonSpace="true" />
+		</context>
+		
+		<context attribute="Comment" lineEndContext="#stay" name="Outscoped intern">
+			<DetectSpaces />
+			<IncludeRules context="##Alerts" />
+			<DetectIdentifier />
+			<DetectChar attribute="String" context="String" char="&quot;"/>
+			<Detect2Chars attribute="Comment" context="Comment" char="/" char1="/"/>
+			<Detect2Chars attribute="Comment" context="MLComment" char="/" char1="*" beginRegion="comment"/>
+			<RegExpr attribute="Comment" context="Outscoped intern" String="#\s*if" beginRegion="PP" firstNonSpace="true" />
+			<RegExpr attribute="Comment" context="#pop" String="#\s*endif" endRegion="PP" firstNonSpace="true" />
+		</context>
+	
+		<context attribute="Error" lineEndContext="#pop" name="AfterHash">
+			<!-- define, elif, else, endif, error, if, ifdef, ifndef, include, include_next, line, pragma, undef, warning -->
+			<RegExpr attribute="Preprocessor" context="Preprocessor" String="#\s*if(?:def|ndef)?(?=\s+\S)" insensitive="true" beginRegion="PP" firstNonSpace="true" />
+			<RegExpr attribute="Preprocessor" context="Preprocessor" String="#\s*endif" insensitive="true" endRegion="PP" firstNonSpace="true" />
+			<RegExpr attribute="Preprocessor" context="Define" String="#\s*define.*((?=\\))" insensitive="true" firstNonSpace="true" />
+			<RegExpr attribute="Preprocessor" context="Preprocessor" String="#\s*(?:el(?:se|if)|include(?:_next)?|define|undef|line|error|warning|pragma)" insensitive="true" firstNonSpace="true" />
+		</context>
+		
+		<context attribute="Preprocessor" lineEndContext="#pop" name="Preprocessor">
+			<LineContinue attribute="Preprocessor" context="#stay"/>
+			<RangeDetect attribute="Preprocessor" context="#stay" char="&quot;" char1="&quot;"/>
+			<RangeDetect attribute="Preprocessor" context="#stay" char="&lt;" char1="&gt;"/>
+			<Detect2Chars attribute="Comment" context="Commentar/Preprocessor" char="/" char1="*" beginRegion="Comment2" />
+		</context>
+
+		<context attribute="Preprocessor" lineEndContext="#pop" name="Define">
+			<LineContinue attribute="Preprocessor" context="#stay"/>
+		</context>
+
+		<context attribute="Comment" lineEndContext="#stay" name="Commentar/Preprocessor">
+			<Detect2Chars attribute="Comment" context="#pop" char="*" char1="/" endRegion="Comment2" />
+		</context>
+	
+	</contexts>
+	<itemDatas>
+		<itemData name="Normal Text" defStyleNum="dsNormal" spellChecking="false"/>
+		<itemData name="Keyword"  defStyleNum="dsKeyword" spellChecking="false"/>
+		<itemData name="String"  defStyleNum="dsString"/>
+		<itemData name="Hex"  defStyleNum="dsBaseN"/>
+		<itemData name="Oct"  defStyleNum="dsBaseN"/>
+		<itemData name="Number"  defStyleNum="dsDecVal"/>
+		<itemData name="Variable"  defStyleNum="dsChar"/>
+		<itemData name="Function" defStyleNum="dsFunction" />
+		<itemData name="DataType"  defStyleNum="dsDataType" spellChecking="false"/>
+		<itemData name="Comment" defStyleNum="dsComment" />
+<!--		<itemData name="Alert" defStyleNum="dsAlert" spellChecking="false"/>-->
+		<itemData name="Error" defStyleNum="dsError" spellChecking="false"/>
+		<itemData name="Invalid" defStyleNum="dsError" underline="0" bold="0" />
+		<itemData name="Preprocessor" defStyleNum="dsOthers" spellChecking="false"/>
+	</itemDatas>
+</highlighting>
+<general>
+	<keywords casesensitive="0" />
+	<comments>
+		<comment name="singleLine" start="//" />
+		<comment name="multiLine" start="/*" end="*/" />
+	</comments>
+</general>
+</language>
